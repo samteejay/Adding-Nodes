@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Adding nodes</title>
+
+</head>
+
+<body id="bod">
+
+<script>
+
+// Author
+	Author : "Samuel Tijani"
+
+// 
+var bodyAdd = document.getElementById("bod");
+var pNodeToAdd = document.createElement("p");
+var imgNodeToAdd = document.createElement("img");
+imgNodeToAdd.setAttribute("src", "images/pix5.jpg");
+imgNodeToAdd.setAttribute("alt", "omali"); 
+imgNodeToAdd.setAttribute("width", "350");
+imgNodeToAdd.setAttribute("height", "350");
+
+var newText = document.createTextNode("Hello World!");
+pNodeToAdd.appendChild(newText);
+
+bodyAdd.appendChild(imgNodeToAdd)
+bodyAdd.appendChild(pNodeToAdd)
+var comeFirst = bodyAdd.firstChild;
+bodyAdd.insertBefore(pNodeToAdd, comeFirst);
+
+</script>
+
+</body>
+</html>
